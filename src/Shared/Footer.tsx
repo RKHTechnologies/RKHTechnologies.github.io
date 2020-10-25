@@ -21,7 +21,7 @@ const FooterContainer = styled.footer`
     margin-top: -10px;
     width: 40px;
     height: 40px;
-    background: url(${ImagesDesktop['rkh']});
+    /* background: url(); */
     background-size: cover;
   }
 
