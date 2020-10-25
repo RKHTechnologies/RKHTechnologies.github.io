@@ -4,16 +4,16 @@ import { ImagesDesktop } from '../Shared/ImageLib';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 2000px;
   overflow: hidden;
 `;
 
 const MainBackground = styled.div`
-  width: 120vw;
-  margin-left: -10%;
-  margin-top: -10%;
-  height: 130vh;
+  height: calc(100vh + 220px);
+  width: calc(100vw + 200px);
+  margin-top: -110px;
+  margin-left: -100px;
   background: rgb(37,120,65);
   background: linear-gradient(180deg, rgba(37,120,65,1) 0%, rgba(19,60,33,1) 100%);
   transform: rotate(8deg);
@@ -33,14 +33,34 @@ const Logo = styled.div`
   z-index: 1;
 `;
 
+const Button = styled.div`
+  padding: 12px 25px;
+  box-sizing: border-box;
+  background: transparent;
+  border: 3px solid ${colours.secondary};
+  color: ${colours.secondary};
+  border-radius: 50px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${colours.secondary};
+    color: ${colours.primary};
+  }
+`;
+
 const Home: FC = () => {
   return (
     <Container>
       <Logo />
+      <MainBackground />
 
-      <MainBackground>
-      </MainBackground>
-
+      <Button>Contact</Button>  
     </Container>
   );
 }
