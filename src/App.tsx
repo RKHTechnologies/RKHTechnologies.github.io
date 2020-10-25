@@ -1,9 +1,11 @@
 import React from 'react';
-import './App.css';
+import GlobalStyle from './Shared/GlobalStyle';
 
 function App() {
   return (
-    <>RKH Technologies</>
+    <>
+      <GlobalStyle />
+    </>
   );
 }
 
