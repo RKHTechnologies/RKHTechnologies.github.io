@@ -16,7 +16,7 @@ const MainBackground = styled.div`
   margin-left: -100px;
   background: rgb(37,120,65);
   background: linear-gradient(180deg, rgba(37,120,65,1) 0%, rgba(19,60,33,1) 100%);
-  transform: rotate(8deg);
+  transform: rotate(5deg);
 `;
 
 const Logo = styled.div`
