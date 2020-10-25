@@ -19,6 +19,12 @@ const MainBackground = styled.div`
   transform: rotate(5deg);
 `;
 
+
+const WhiteBackground = styled(MainBackground)`
+  z-index: 2;
+  background: ${colours.light};
+`;
+
 const Logo = styled.div`
   width: 500px;
   height: 500px;
@@ -59,8 +65,9 @@ const Home: FC = () => {
     <Container>
       <Logo />
       <MainBackground />
-
       <Button>Contact</Button>  
+      {/* <WhiteBackground /> */}
+      
     </Container>
   );
 }
