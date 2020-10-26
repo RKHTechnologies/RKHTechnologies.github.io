@@ -9,15 +9,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #fff;
+        width: 5px;
     }
 
     ::-webkit-scrollbar-thumb {
-        background: ${colours.grey20};
+        background: ${colours.secondary};
         border-radius: 20px;
     }
 `;

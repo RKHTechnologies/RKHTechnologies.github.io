@@ -5,6 +5,7 @@ import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 const Container = styled.div`
   width: 100%;
+  max-width: calc(100vw);
   height: 2000px;
   overflow: hidden;
 `;
@@ -22,7 +23,10 @@ const MainBackground = styled.div`
 
 const WhiteBackground = styled(MainBackground)`
   z-index: 2;
-  background: ${colours.light};
+  background: linear-gradient(180deg, rgba(37,120,65,1) 0%, rgba(19,60,33,1) 100%);
+  border-top: 5px solid ${colours.secondary};
+  margin-top: 0;
+  position: absolute;
 `;
 
 const Logo = styled.div`
@@ -42,7 +46,6 @@ const Logo = styled.div`
 const Button = styled.div`
   padding: 12px 25px;
   box-sizing: border-box;
-  background: transparent;
   border: 3px solid ${colours.secondary};
   color: ${colours.secondary};
   border-radius: 50px;
@@ -53,9 +56,13 @@ const Button = styled.div`
   font-size: 1.2em;
   letter-spacing: 4px;
   cursor: pointer;
+  background: linear-gradient(to right, ${colours.secondary} 50%, transparent 50%);
+  background-size: 200%;
+  background-position: right;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: ${colours.secondary};
+    background-position: left;
     color: ${colours.primary};
   }
 `;
@@ -66,7 +73,7 @@ const Home: FC = () => {
       <Logo />
       <MainBackground />
       <Button>Contact</Button>  
-      {/* <WhiteBackground /> */}
+      <WhiteBackground />
       
     </Container>
   );
