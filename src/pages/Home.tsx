@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { ImagesDesktop } from '../Shared/ImageLib';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
+import Portfolio from '../components/Portfolio';
 
 const Container = styled.div`
   width: 100%;
@@ -30,11 +31,16 @@ const SecondBackground = styled(MainBackground)`
 `;
 
 const Content = styled.div`
-  width: 100%;
+  width: calc(100% - 200px);
   height: calc(100% - 250px);
-  background: lightblue;
   transform: rotate(-5deg);
   margin-top: 180px;
+  margin-left: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 0;
+  box-sizing: border-box;
 `;
 
 const Logo = styled.div`
@@ -83,7 +89,7 @@ const Home: FC = () => {
       <Button>Contact</Button>  
       <SecondBackground>
         <Content>
-
+          <Portfolio />
         </Content>
       </SecondBackground>
       
