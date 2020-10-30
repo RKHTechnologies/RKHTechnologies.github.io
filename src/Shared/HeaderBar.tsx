@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import logo from '../logo.svg';
+import logo from '../img/logo_surround.png';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 interface IProps {
     stickyHeader?: boolean;
@@ -14,14 +14,14 @@ interface menuProps {
 
 const HeaderNav = styled.div`
     position: ${(p: IProps) => p.stickyHeader ? "fixed" : "absolute"};
-    top: ${(p: IProps) => p.stickyHeader ? "0" : "100vh"};
-    box-shadow: ${(p: IProps) => p.stickyHeader ? "0 0.25rem 0.125rem 0 rgba(0,0,0,0.025)" : null};
-    width: 100%;
+    top: ${(p: IProps) => p.stickyHeader ? "0" : "calc(100vh + 180px)"};
+    /* box-shadow: ${(p: IProps) => p.stickyHeader ? "0 0.25rem 0.125rem 0 rgba(0,0,0,0.025)" : null}; */
+    width: 100vw;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${colours.light};
+    /* background: ${colours.light}; */
     z-index: 2;
 `;
 
@@ -32,12 +32,12 @@ const HeaderNavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: ${colours.light};
+    /* background: ${colours.light}; */
     color: ${colours.dark};
     transition: height 0.3s ease;
 
     & > img {
-        height: 68px;
+        height: 75px;
         margin-left: 50px;
 
         @media(max-width: 350px) {
@@ -58,22 +58,23 @@ const Logo = styled.img`
 const HeaderButton = styled.button`
     height: 100%;
     background: transparent;
-    color: ${colours.primary};
+    color: ${colours.secondary};
     cursor: pointer;
-    padding: 15px 14px;
+    padding: 15px 30px;
     border: none;
     border-bottom: 2px solid transparent;
     border-top: 2px solid transparent;
     font-weight: 500;
     text-decoration: none;
+    font-size: 1em;
     
     &:hover {
-      border-bottom-color: ${colours.primary};
+      border-bottom-color: ${colours.secondary};
     }
 
     &:focus {  
       outline: 0;
-      background: #eaeaea;
+      border-bottom-color: ${colours.secondary};
     }
  
     &:last-child {

@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Error404 from './Shared/Error404';
 import GlobalStyle from './Shared/GlobalStyle';
+import HeaderBar from './Shared/HeaderBar';
 
 const App: FC = () => {
   const [stickyHeader, setStickyHeader] = useState(false);
@@ -13,7 +14,7 @@ const App: FC = () => {
       setStickyHeader(true);
     
     else
-      window.pageYOffset > window.innerHeight - 5 ? setStickyHeader(true) : setStickyHeader(false); 
+      window.pageYOffset > window.innerHeight + 180 ? setStickyHeader(true) : setStickyHeader(false); 
   });
 
   // const updateSticky = () => {
@@ -24,9 +25,8 @@ const App: FC = () => {
   // }
 
   return (
-    
-
     <>
+      <HeaderBar stickyHeader={stickyHeader} />
       <Switch>
         <Route exact path={'/'} component={Home} />
         <Route component={Error404} />

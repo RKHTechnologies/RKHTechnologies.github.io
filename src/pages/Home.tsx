@@ -21,12 +21,20 @@ const MainBackground = styled.div`
 `;
 
 
-const WhiteBackground = styled(MainBackground)`
-  z-index: 2;
+const SecondBackground = styled(MainBackground)`
+  z-index: 1;
   background: linear-gradient(180deg, rgba(37,120,65,1) 0%, rgba(19,60,33,1) 100%);
   border-top: 5px solid ${colours.secondary};
   margin-top: 0;
   position: absolute;
+`;
+
+const Content = styled.div`
+  width: 100%;
+  height: calc(100% - 250px);
+  background: lightblue;
+  transform: rotate(-5deg);
+  margin-top: 180px;
 `;
 
 const Logo = styled.div`
@@ -73,7 +81,11 @@ const Home: FC = () => {
       <Logo />
       <MainBackground />
       <Button>Contact</Button>  
-      <WhiteBackground />
+      <SecondBackground>
+        <Content>
+
+        </Content>
+      </SecondBackground>
       
     </Container>
   );
