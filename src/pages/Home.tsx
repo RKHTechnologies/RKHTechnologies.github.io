@@ -39,7 +39,7 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 0;
+  padding: 50px 20px 0;
   box-sizing: border-box;
 `;
 

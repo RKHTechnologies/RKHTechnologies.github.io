@@ -19,10 +19,15 @@ const Header = styled.h1`
   color: #cbb62c;
   text-shadow: 3px 5px 7px #133d21;
   letter-spacing: 6px;
+  margin-bottom: 30px;
 `;
 
 const SubHeader = styled.div`
-
+  color: #e5e5e5;
+  font-family: 'montserrat';
+  font-weight: 100;
+  font-size: 1.2em;
+  
 `;
 
 const Portfolio: FC = () => {
@@ -31,8 +36,8 @@ const Portfolio: FC = () => {
       <Header>Portfolio</Header>
       {/* <Header>Recent Projects</Header> */}
       {/* <Header>Projects</Header> */}
+      <SubHeader>We design and build creative, responsive and engaging designs. Select below to view some of our recent projects.</SubHeader>
       
-
     </Container>
   );
 }
