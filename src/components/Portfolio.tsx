@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import styled from 'styled-components';
 import { colours } from '../Shared/SharedStyles';
+import Carousel from './Carousel'
 
 const Container = styled.div`
   height: 100%;
@@ -27,7 +28,6 @@ const SubHeader = styled.div`
   font-family: 'montserrat';
   font-weight: 100;
   font-size: 1.2em;
-  
 `;
 
 const Portfolio: FC = () => {
@@ -37,7 +37,8 @@ const Portfolio: FC = () => {
       {/* <Header>Recent Projects</Header> */}
       {/* <Header>Projects</Header> */}
       <SubHeader>We design and build creative, responsive and engaging designs. Select below to view some of our recent projects.</SubHeader>
-      
+
+      <Carousel />
     </Container>
   );
 }
